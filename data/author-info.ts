@@ -1,7 +1,7 @@
 export const AUTHOR_INFO = {
   name: 'Venkatesh Raju',
   description: 'Software Developer | Tech Enthusiast | Lifelong Learner',
-  email: 'me@venkateshraju.me',
+  email: 'me@venkateshraju.in',
   identity: 'Tech Enthusiast',
   address: {
     city: 'Bangalore, India',
@@ -11,7 +11,7 @@ export const AUTHOR_INFO = {
     company: 'Student',
     occupation: 'CSE Undergrad',
     location: 'Bangalore, India',
-    website: 'https://venkateshraju.me',
+    website: 'https://venkateshraju.in',
   },
   social: {
     github: 'https://github.com/venkateshraju04',

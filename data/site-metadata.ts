@@ -6,7 +6,7 @@ export const SITE_METADATA = {
     'My development journey - sharing insights, lessons, and resources for fellow developers.',
   language: 'en-us',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://blog.venkateshraju.me',
+  siteUrl: 'https://blog.venkateshraju.in',
   siteRepo: 'https://github.com/venkateshraju04/blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.jpg`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/page.jpg`,

@@ -27,7 +27,7 @@ const allBlogs = [
 ]
 
 function generateSitemap() {
-  const siteUrl = 'https://blog.venkateshraju.me'
+  const siteUrl = 'https://blog.venkateshraju.in'
 
   const blogRoutes = allBlogs
     .filter((p) => !p.draft)
