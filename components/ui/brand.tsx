@@ -264,7 +264,7 @@ export function Brand(props: {
   }
 
   return (
-    <Link href={`${url}?ref=venkateshraju.in`} className={className}>
+    <Link href={url} className={className}>
       <Icon className={iconClassName} fill="currentColor" />
     </Link>
   )

@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { JetBrains_Mono, Nunito, Playpen_Sans } from 'next/font/google'
 import { UmamiAnalytics } from '~/components/analytics/umami'
-import { Footer } from '~/components/footer'
+
 import { Header } from '~/components/header'
 import { KBarSearchProvider } from '~/components/search/kbar-provider'
 import { TiltedGridBackground } from '~/components/ui/tilted-grid-background'
@@ -61,13 +61,15 @@ export const metadata: Metadata = {
     },
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    nocache: true,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
+      noimageindex: true,
       'max-video-preview': -1,
-      'max-image-preview': 'large',
+      'max-image-preview': 'none',
       'max-snippet': -1,
     },
   },
@@ -121,7 +123,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
             <main className="mb-auto grow">{children}</main>
           </KBarSearchProvider>
-          <Footer />
         </ThemeProviders>
         <SpeedInsights />
       </body>

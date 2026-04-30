@@ -52,6 +52,11 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
+  // Prevent search engine indexing
+  {
+    key: 'X-Robots-Tag',
+    value: 'noindex, nofollow, noarchive, nosnippet, noimageindex',
+  },
 ]
 
 const output = process.env.EXPORT ? 'export' : undefined

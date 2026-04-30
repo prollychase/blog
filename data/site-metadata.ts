@@ -1,15 +1,16 @@
 export const SITE_METADATA = {
-  title: `Venkatesh's blog - My development journey`,
-  author: 'Venkatesh Raju',
-  headerTitle: `Venkatesh's blog`,
+  title: `Unfiltered`,
+  author: 'Anonymous',
+  headerTitle: `Unfiltered`,
   description:
-    'My development journey - sharing insights, lessons, and resources for fellow developers.',
+    "Raw thoughts, personal stories, and unfiltered experiences — the stuff that doesn't fit the main blog.",
   language: 'en-us',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://blog.venkateshraju.in',
-  siteRepo: 'https://github.com/venkateshraju04/blog',
+  siteUrl: 'https://unfiltered.venkateshraju.in',
+  siteRepo: '',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.jpg`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/page.jpg`,
+  mainBlogUrl: 'https://blog.venkateshraju.in',
 
   locale: 'en-US',
   stickyNav: true,

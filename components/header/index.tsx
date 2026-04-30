@@ -9,9 +9,7 @@ import { HEADER_NAV_LINKS } from '~/data/navigation'
 import { SITE_METADATA } from '~/data/site-metadata'
 import { Logo } from './logo'
 import { MobileNav } from './mobile-nav'
-import { MoreLinks } from './more-links'
 import { ThemeSwitcher } from './theme-switcher'
-import { AUTHOR_INFO } from '~/data/author-info'
 import { KbarSearchTrigger } from '../search/kbar-trigger'
 
 export function Header() {
@@ -43,7 +41,6 @@ export function Header() {
                 </Link>
               )
             })}
-            <MoreLinks />
           </div>
           <div
             data-orientation="vertical"

@@ -1,7 +1,7 @@
 'use client'
 
 import type { Blog } from 'contentlayer/generated'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { PostCardGridView } from '~/components/blog/post-card-grid-view'
@@ -10,6 +10,7 @@ import { Container } from '~/components/ui/container'
 import { GrowingUnderline } from '~/components/ui/growing-underline'
 import { Link } from '~/components/ui/link'
 import { PageHeader } from '~/components/ui/page-header'
+import { SITE_METADATA } from '~/data/site-metadata'
 import type { CoreContent } from '~/types/data'
 
 interface PaginationProps {
@@ -74,6 +75,24 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   )
 }
 
+function MoreBlogsButton() {
+  return (
+    <div className="flex justify-center border-t border-gray-200 pb-8 pt-8 dark:border-gray-700">
+      <Link
+        href={SITE_METADATA.mainBlogUrl}
+        className="group inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-3 font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary-500/30 dark:from-primary-400 dark:to-primary-500 dark:shadow-primary-400/20"
+        data-umami-event="more-blogs-cta"
+      >
+        <span>All blogs</span>
+        <ExternalLink
+          className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          strokeWidth={2}
+        />
+      </Link>
+    </div>
+  )
+}
+
 export function ListLayout({
   posts,
   title,
@@ -94,7 +113,7 @@ export function ListLayout({
     <Container className="pt-4 lg:pt-12">
       <PageHeader
         title={title}
-        description="A collection of my thoughts, tutorials, and ideas."
+        description="Raw thoughts, personal stories, and unfiltered experiences."
         className="border-b border-gray-200 dark:border-gray-700"
       >
         <SearchArticles label="Search articles" onChange={(e) => setSearchValue(e.target.value)} />
@@ -111,6 +130,7 @@ export function ListLayout({
       {pagination && pagination.totalPages > 1 && !searchValue && (
         <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
       )}
+      <MoreBlogsButton />
     </Container>
   )
 }
